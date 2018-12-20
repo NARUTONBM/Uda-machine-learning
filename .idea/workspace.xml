@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="994f0b06-f126-485f-8b35-c50e06751760" name="Default Changelist" comment="" />
+    <list default="true" id="994f0b06-f126-485f-8b35-c50e06751760" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/learning_note/.ipynb_checkpoints/Neural_Network_Note-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/.ipynb_checkpoints/Neural_Networks_Note-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/.ipynb_checkpoints/Udacity-机器学习工程师纳米学位-学习笔记W00-01-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/Deep_Learning_Note.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/deep_neural_networks_muti_class_structure.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/deep_neural_networks_structure.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/early_stopping_graph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/forward_matrix.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/forward_multi_layer_matrix.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/gradient_descent_algorithm_and_logistic_algorithm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/gradient_descent_algorithm_how.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/gradient_descent_define.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/gradient_descent_sample_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/gradient_descent_sample_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/limit_gradient_descent_algorithm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/limit_sigmoid_function.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/logistic_error_sample.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/momentum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/muti-class_cross-entropy_sample.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_note/one_hot_sample.jpg" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +37,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -24,7 +46,7 @@
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,19 +67,19 @@
         <counts>
           <entry key="gitignore" value="7" />
           <entry key="md" value="62" />
-          <entry key="txt" value="214" />
+          <entry key="txt" value="311" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="62" />
-          <entry key="PLAIN_TEXT" value="221" />
+          <entry key="PLAIN_TEXT" value="318" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -97,6 +119,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,11 +127,15 @@
               <item name="cn-machine-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="cn-machine-learning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cn-machine-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cn-machine-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="learning_note" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,13 +320,27 @@
       <option name="project" value="LOCAL" />
       <updated>1545229213665</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="finish mini project 'IMDB-keras' &amp; 'student-admissions'">
+      <created>1545316484002</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545316484002</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update note to 'deep neural networks'">
+      <created>1545316566038</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545316566038</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20713525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20926517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -325,6 +366,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -338,7 +405,9 @@
     <MESSAGE value="update note to lesson 'deel_learning'" />
     <MESSAGE value="update note to lesson 'deep_learning'" />
     <MESSAGE value="add learning example ‘Gradient Descent’" />
-    <option name="LAST_COMMIT_MESSAGE" value="add learning example ‘Gradient Descent’" />
+    <MESSAGE value="finish mini project 'IMDB-keras' &amp; 'student-admissions'" />
+    <MESSAGE value="update note to 'deep neural networks'" />
+    <option name="LAST_COMMIT_MESSAGE" value="update note to 'deep neural networks'" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
