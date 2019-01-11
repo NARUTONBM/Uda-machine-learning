@@ -2,6 +2,7 @@ from collections import deque
 import sys
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 def interact(env, agent, num_episodes=20000, window=100):
@@ -31,9 +32,21 @@ def interact(env, agent, num_episodes=20000, window=100):
         state = env.reset()
         # initialize the sampled reward
         samp_reward = 0
+
+        # Expected Sarsa(Failed)
+        # policy_s = agent.epsilon_greedy_probs(state, i_episode, 0.005)
+        # while True:
+        #     # agent selects an action
+        #     action = agent.select_action(state, policy_s)
+        #     # agent performs the selected action
+        #     next_state, reward, done, _ = env.step(action)
+        #     # agent performs internal updates based on sampled experience
+        #     agent.step(state, action, reward, next_state, done, i_episode)
+
+        # Sarsamax algorithm
         while True:
             # agent selects an action
-            action = agent.select_action(state)
+            action = agent.select_action(state, i_episode)
             # agent performs the selected action
             next_state, reward, done, _ = env.step(action)
             # agent performs internal updates based on sampled experience
@@ -62,4 +75,12 @@ def interact(env, agent, num_episodes=20000, window=100):
             print('\nEnvironment solved in {} episodes.'.format(i_episode), end="")
             break
         if i_episode == num_episodes: print('\n')
+
+    # plot performance
+    plt.plot(np.linspace(0, num_episodes, len(avg_rewards), endpoint=False), np.asarray(avg_rewards))
+    plt.xlabel('Episode Number')
+    plt.ylabel('Average Reward (Over Next %d Episodes)' % num_episodes)
+    plt.show()
+    # print best 100-episode performance
+    print(('Best Average Reward over %d Episodes: ' % num_episodes), np.max(avg_rewards))
     return avg_rewards, best_avg_reward
