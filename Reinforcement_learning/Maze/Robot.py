@@ -31,22 +31,26 @@ class Robot(object):
     def set_status(self, learning=False, testing=False):
         """
         Determine whether the robot is learning its q table, or
-        exceuting the testing procedure.
+        executing the testing procedure.
         """
         self.learning = learning
         self.testing = testing
 
     def update_parameter(self):
         """
-        Some of the paramters of the q learning robot can be altered,
+        Some of the parameters of the q learning robot can be altered,
         update these parameters when necessary.
         """
         if self.testing:
-            # TODO 1. No random choice when testing
+            # No random choice when testing
             pass
         else:
-            # TODO 2. Update parameters when learning
-            pass
+            # Update parameters when learning
+            self.t += 1
+            if self.epsilon < 0.01:
+                self.epsilon = 0.01
+            else:
+                self.epsilon -= self.t * 0.1
 
         return self.epsilon
 
@@ -55,19 +59,22 @@ class Robot(object):
         Get the current state of the robot. In this
         """
 
-        # TODO 3. Return robot's current state
-        return None
+        # Return robot's current state
+        return self.maze.sense_robot()
 
     def create_Qtable_line(self, state):
         """
         Create the qtable with the current state
         """
-        # TODO 4. Create qtable with current state
+        # Create qtable with current state
         # Our qtable should be a two level dict,
         # Qtable[state] ={'u':xx, 'd':xx, ...}
         # If Qtable[state] already exits, then do
         # not change it.
-        pass
+        if state in self.Qtable:
+            pass
+        else:
+            self.Qtable[state] = {'u': 0.0, 'd': 0.0, 'r': 0.0, 'l': 0.0}
 
     def choose_action(self):
         """
@@ -76,23 +83,24 @@ class Robot(object):
 
         def is_random_exploration():
 
-            # TODO 5. Return whether do random choice
+            # Return whether do random choice
             # hint: generate a random number, and compare
             # it with epsilon
-            pass
+            return random.random() < self.epsilon
 
         if self.learning:
             if is_random_exploration():
-                # TODO 6. Return random choose aciton
-                return None
+                # Return random choose action
+                return random.choice(self.valid_actions)
             else:
-                # TODO 7. Return action with highest q value
-                return None
+                # choose action with highest q value
+                return max(self.Qtable[self.state], key=self.Qtable[self.state].get)
         elif self.testing:
-        # TODO 7. choose action with highest q value
+            # choose action with highest q value
+            return max(self.Qtable[self.state], key=self.Qtable[self.state].get)
         else:
-
-    # TODO 6. Return random choose aciton
+            # Return random choose action
+            return random.choice(self.valid_actions)
 
     def update_Qtable(self, r, action, next_state):
         """
@@ -100,12 +108,15 @@ class Robot(object):
         """
         if self.learning:
             pass
-            # TODO 8. When learning, update the q table according
+            # When learning, update the q table according
             # to the given rules
+            q_predict = self.Qtable[self.state][action]
+            q_target = r + self.gamma * float(max(self.Qtable[next_state].values()))
+            self.Qtable[self.state][action] += self.alpha * (q_target - q_predict)
 
     def update(self):
         """
-        Describle the procedure what to do when update the robot.
+        Describe the procedure what to do when update the robot.
         Called every time in every epoch in training or testing.
         Return current action and reward.
         """
