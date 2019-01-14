@@ -43,14 +43,11 @@ class Robot(object):
         """
         if self.testing:
             # No random choice when testing
-            pass
+            self.epsilon = 0.0
         else:
             # Update parameters when learning
             self.t += 1
-            if self.epsilon < 0.01:
-                self.epsilon = 0.01
-            else:
-                self.epsilon -= self.t * 0.1
+            self.epsilon = self.epsilon0 / self.t
 
         return self.epsilon
 
@@ -71,9 +68,7 @@ class Robot(object):
         # Qtable[state] ={'u':xx, 'd':xx, ...}
         # If Qtable[state] already exits, then do
         # not change it.
-        if state in self.Qtable:
-            pass
-        else:
+        if state not in self.Qtable:
             self.Qtable[state] = {'u': 0.0, 'd': 0.0, 'r': 0.0, 'l': 0.0}
 
     def choose_action(self):
@@ -107,12 +102,10 @@ class Robot(object):
         Update the qtable according to the given rule.
         """
         if self.learning:
-            pass
             # When learning, update the q table according
             # to the given rules
-            q_predict = self.Qtable[self.state][action]
-            q_target = r + self.gamma * float(max(self.Qtable[next_state].values()))
-            self.Qtable[self.state][action] += self.alpha * (q_target - q_predict)
+            self.Qtable[self.state][action] = (1 - self.alpha) * self.Qtable[self.state][action] + self.alpha * (
+                    r + self.gamma * max(self.Qtable[next_state].values()))
 
     def update(self):
         """
