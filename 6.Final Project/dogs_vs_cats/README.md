@@ -24,6 +24,8 @@
 
 此外还有一个数据集也非常好，可以作为扩充数据集或是做检测/分割问题：[The Oxford-IIIT Pet Dataset](http://www.robots.ox.ac.uk/~vgg/data/pets/)
 
+将压缩包解压后，提取目录下的test、train文件夹，放到'data/test'和'data/train'路径下
+
 ![](pet_annotations.jpg)
 
 ## 建议
