@@ -1,6 +1,0 @@
-.DS_Store
-saved_models/
-.ipynb_checkpoints/
-/data/lfw/
-/data/dog_images/
-/data/bottleneck_features/
