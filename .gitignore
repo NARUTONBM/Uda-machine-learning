@@ -3,7 +3,6 @@
 /venv/
 /.ipynb_checkpoints/
 /learning_note/Reinforcement_learning/.ipynb_checkpoints/
-/*.pdf
 /learning_note/.ipynb_checkpoints/
 /learning_note/Mathematical_Foundation/.ipynb_checkpoints/
 /5.Reinforcement_Learning/*.pdf
@@ -19,3 +18,5 @@
 /4.Deep_Learning/conv-visualization/
 /4.Deep_Learning/dl-final-project/
 /4.Deep_Learning/student-admissions/.ipynb_checkpoints/
+/6.Final Project/*.md
+/6.Final Project/*.pdf
